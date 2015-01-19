@@ -1,0 +1,70 @@
+/*SORRY SASS YOU SAD BABY
+NO MIXINS ALLOWED IN JQUERY
+QQ*/
+
+
+/*Variables*/
+$base_color: #474747;
+
+
+/*Mixins*/
+@mixin body {
+  color: lighten($base_color, 100%);
+  font-size: 2em;
+}
+
+
+/*Body and Container*/
+body {
+  background: $base_color;
+  text-align: center;
+  @include body;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+  
+  #container {
+  width: 300px;
+  float: right;
+
+  @media (max-width: 800px) {
+    display: block;
+    max-width: 100%;
+    font-size: 0.75em;
+    float: left;
+  }
+
+  #off {
+    color: #86E8FD;
+  }
+  }
+}
+#panel {
+  width: 300px;
+  height: 500px;
+  background: #e5e5e5;
+  float: left;
+  border: 3px outset gray;
+  //Border Styles:
+  //Hidden, Dotted, Dashed, Solid, Double,     Groove, Ridge, Inset, Outset
+  //box-shadow: 5px 4px 2px #666666;
+  color: #000000;
+  font-family: "Arial";
+  font-size: 0.55em;
+  margin-top: 2%;
+
+  @media (max-width: 800px) {
+    max-width: 100%;
+    height: 350px;
+    font-size: 0.375em;
+  }
+
+  #title {
+    font-size: 1.10em;
+  }
+
+}
+#total {
+  margin: 0 10%;
+}
